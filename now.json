@@ -1,4 +1,7 @@
 {
     "version": 2,
-    "routes": [{ "src": "/", "dest": "public/" }]
+    "routes": [{
+        "src": "/",
+        "dest": "public/"
+    }]
 }
