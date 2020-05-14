@@ -43,14 +43,14 @@ $(window).on('scroll', () => {
     $('header#r').css('opacity', 1);
     if (isOnScreen($('#home'))) {
         v.play();
-        $('main').removeClass('toWhite').addClass('toBlack');
+        $('section, #first, main').removeClass('toWhite').addClass('toBlack');
         $('header.side *').css({
             'color': 'var(--pink)'
         });
         $('.side').addClass('pink-hover');
     } else {
         v.pause();
-        $('main').removeClass('toBlack').addClass('toWhite');
+        $('section, #first, main').removeClass('toBlack').addClass('toWhite');
         $('header.side *').css({
             'color': 'var(--black)'
         });

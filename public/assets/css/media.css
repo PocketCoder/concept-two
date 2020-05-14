@@ -23,7 +23,7 @@
 
     main {
         margin: 0;
-        background-color: var(--black);
+        background-color: white;
     }
 
     .gap {
@@ -134,36 +134,17 @@
     #about {
         min-height: 75vh;
         height: auto;
+        padding: 5% 5%;
     }
-
-    .ani--fadeUp {
-        transform: none;
-        opacity: 1;
-    }
-
-    #about #text--wrapper {
-        height: 100%;
-        width: 95%;
-    }
-
-    #about #text--wrapper h2 {
-        padding-bottom: 5vh;
+    
+    #about h2 {
         font-size: 8vw;
         color: var(--black);
     }
 
-    #about #text--wrapper p {
+    #about p {
         font-size: 4vw;
         width: 100%;
-    }
-
-    #about--images {
-        display: none;
-    }
-
-    #about strong {
-        text-decoration: none;
-        font-weight: 400;
     }
 
     /* ---------------
