@@ -86,12 +86,13 @@
         margin: 0 0 0 5%;
     }
 
-    #title h1 .line {
+    #title .line {
+        font-size: 10vw;
         transform: translateY(0);
         animation: none;
     }
 
-    #title h1 strong {
+    #title strong {
         animation: none;
         font-weight: 500;
     }
@@ -245,8 +246,13 @@
     #contact #contact--form .left,
     #contact #contact--form .right {
         padding: 5% 0;
+        justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    #contact #contact--form .right {
+        border-left: 0;
     }
 
     form {
@@ -256,10 +262,6 @@
     #contact--form #row--wrapper .row {
         align-items: center;
         padding: 0 0 5% 10%;
-    }
-
-    .vl {
-        display: none;
     }
 
     /* ---------------

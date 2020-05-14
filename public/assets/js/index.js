@@ -47,12 +47,14 @@ $(window).on('scroll', () => {
         $('header.side *').css({
             'color': 'var(--pink)'
         });
+        $('.side').addClass('pink-hover');
     } else {
         v.pause();
         $('main').removeClass('toBlack').addClass('toWhite');
         $('header.side *').css({
             'color': 'var(--black)'
         });
+        $('.side').removeClass('pink-hover');
     }
 
     if (isOnScreen($('#name'))) {

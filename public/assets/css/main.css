@@ -209,6 +209,10 @@ nav ul>li {
     padding-left: 0;
 }
 
+.pink-hover:hover * {
+    color: var(--pink);
+}
+
 /* ---------------
 
 Home
@@ -232,28 +236,22 @@ Home
 }
 
 #title {
-    height: auto;
-    width: 100%;
-    margin: 10vh 0 0 10vw;
-    animation-duration: 2s;
-}
-
-#title h1 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-
-    height: 100%;
+    height: 100vh;
     width: 100%;
-
-    font-size: 10vw;
-    color: var(--darkPink);
+    animation-duration: 2s;
 }
 
-#title h1 .line {
+#title .line {
+    margin-left: 10vw;
     height: cacl(100vh/4);
     padding: 1% 0;
 
+    color: var(--darkPink);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10em;
     font-weight: 300;
 
     transform: translateY(100vh);
@@ -264,23 +262,23 @@ Home
     animation: floatUp 2s forwards ease-in-out;
 }
 
-#title h1 .line:nth-child(1) {
+#title .line:nth-child(1) {
     animation-delay: 0.2s;
 }
 
-#title h1 .line:nth-child(2) {
+#title .line:nth-child(2) {
     animation-delay: 0.3s;
 }
 
-#title h1 .line:nth-child(3) {
+#title .line:nth-child(3) {
     animation-delay: 0.4s;
 }
 
-#title h1 .line:nth-child(4) {
+#title .line:nth-child(4) {
     animation-delay: 0.5s;
 }
 
-#title h1 strong {
+#title strong {
     color: var(--pink);
     font-weight: 300;
     will-change: font-weight;
