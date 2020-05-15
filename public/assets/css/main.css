@@ -174,6 +174,7 @@ header.side {
     opacity: 0.5;
     top: 0;
     right: 0;
+    left: 95vw;
 
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
@@ -181,11 +182,11 @@ header.side {
     -o-transform-origin: 0 0;
     transform-origin: 0 0;
 
-    -webkit-transform: rotate(90deg) translateY(-1750%);
-    -moz-transform: rotate(90deg) translateY(-1750%);
-    -ms-transform: rotate(90deg) translateY(-1750%);
-    -o-transform: rotate(90deg) translateY(-1750%);
-    transform: rotate(90deg) translateY(-1750%);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 
     transition: opacity 0.5s ease-in-out;
 }
