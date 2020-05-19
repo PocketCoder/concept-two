@@ -3,8 +3,8 @@ var rellaxC = new Rellax('.rellax-c', {
     center: true
 });
 
-$(window).on('load', function(){
-  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+$(window).on('load', function() {
+   //wait for page load PLUS two seconds.
 });
 
 function removeLoader(){
@@ -17,6 +17,7 @@ function removeLoader(){
 //TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
 const v = document.getElementById('video-bg');
 v.addEventListener('canplaythrough', function () {
+    removeLoader();
     this.play();
 });
 
