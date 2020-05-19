@@ -7,16 +7,17 @@ $(window).on('load', function() {
   setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
 
-function removeLoader(){
-    $( "#loadingDiv" ).fadeOut(500, function() {
+function removeLoader() {
+    $('#loadingDiv').fadeOut(500, function() {
       // fadeOut complete. Remove the loading div
-      $( "#loadingDiv" ).remove(); //makes page more lightweight 
+      $('#loadingDiv').remove(); //makes page more lightweight 
   });  
 }
 
 //TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
 const v = document.getElementById('video-bg');
 v.addEventListener('canplaythrough', function () {
+    removeLoader();
     this.play();
 });
 
