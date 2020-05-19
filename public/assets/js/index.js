@@ -17,7 +17,6 @@ function removeLoader() {
 //TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
 const v = document.getElementById('video-bg');
 v.addEventListener('canplaythrough', function () {
-    removeLoader();
     this.play();
 });
 
