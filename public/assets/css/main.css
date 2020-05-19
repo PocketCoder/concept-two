@@ -416,6 +416,44 @@ About
 
 /* ---------------
 
+Reel
+
+--------------- */
+
+#reel {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: white;
+    color: var(--black);
+}
+
+#reel .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 90%;
+}
+
+#reel .embed-container iframe,
+#reel .embed-container object,
+#reel .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------
+
 Work
 
 --------------- */
