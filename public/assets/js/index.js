@@ -3,6 +3,11 @@ var rellaxC = new Rellax('.rellax-c', {
     center: true
 });
 
+$(window).load(function () {
+    // Animate loader off screen
+    $('.se-pre-con').fadeOut('slow');;
+});
+
 //TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
 const v = document.getElementById('video-bg');
 v.addEventListener('canplaythrough', function () {
