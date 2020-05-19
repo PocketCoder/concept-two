@@ -111,6 +111,10 @@ Misc
     background-color: black;
 }
 
+.gap h1 {
+    will-change: transform;
+}
+
 main {
     margin: 0 0 30vh 0;
     height: auto;
