@@ -3,10 +3,16 @@ var rellaxC = new Rellax('.rellax-c', {
     center: true
 });
 
-$(window).load(function () {
-    // Animate loader off screen
-    $('.se-pre-con').fadeOut('slow');
+$(window).on('load', function(){
+  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
+
+function removeLoader(){
+    $( "#loadingDiv" ).fadeOut(500, function() {
+      // fadeOut complete. Remove the loading div
+      $( "#loadingDiv" ).remove(); //makes page more lightweight 
+  });  
+}
 
 //TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
 const v = document.getElementById('video-bg');

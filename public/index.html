@@ -40,7 +40,7 @@
         </header>
         <main>
             <section id="home" class="flex">
-                <video id="video-bg" muted loop disablePictureInPicture poster="assets/vids/bg/placeholder.png">
+                <video id="video-bg" muted loop disablePictureInPicture poster="assets/vids/bg/placeholder.png" preload="auto">
                     <source src="assets/vids/bg/bg-reel.mp4" type="video/mp4" />
                 </video>
                 <div id="title" class="flex">
@@ -224,6 +224,8 @@
         </main>
         <script src="assets/js/rellax.min.js"></script>
         <script src="assets/js/index.js"></script>
+        <div id="loadingDiv" class="flex">
+            <div class="loader">Loading...</div>
+        </div>
     </body>
-    <div class="se-pre-con"></div>
 </html>
