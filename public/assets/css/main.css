@@ -48,10 +48,6 @@ body {
     font-family: 'Jost', sans-serif;
 
     scroll-behavior: smooth;
-
-    /*scroll-snap-type: mandatory;*/
-    /*-ms-scroll-snap-type: y mandatory;*/
-    /*scroll-snap-type: y mandatory;*/
 }
 
 h1,
@@ -142,9 +138,6 @@ section {
     width: 100vw;
 
     background-color: black;
-
-    /*-ms-scroll-snap-align: center;*/
-    /*scroll-snap-align: center;*/
 }
 
 .flex {
