@@ -3,6 +3,15 @@ var rellaxC = new Rellax('.rellax-c', {
     center: true
 });
 
+document.querySelector('.ani-el').style.animationPlayState = 'paused';
+
+$(window).load(function () {
+    // Animate loader off screen
+    $('.loading').fadeOut(1000, () => {
+        document.querySelector('.ani-el').style.animationPlayState = 'running';
+    });
+});
+
 //TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
 const v = document.getElementById('video-bg');
 v.addEventListener('canplaythrough', function () {
