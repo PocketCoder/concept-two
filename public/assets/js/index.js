@@ -5,24 +5,23 @@ var rellaxC = new Rellax('.rellax-c', {
 
 document.querySelector('.ani-el').style.animationPlayState = 'paused';
 
-$(window).load(function () {
-    // Animate loader off screen
-    $('.loading').fadeOut(1000, () => {
+//TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
+const v = document.getElementById('video-bg');
+const hv = document.querySelector('.work--video-bg');
+hv.preload = "auto";
+
+v.addEventListener('canplaythrough', () => {
+    $('.loading').delay(1000).fadeOut(1000, () => {
         document.querySelector('.ani-el').style.animationPlayState = 'running';
+        v.play();
     });
 });
 
-//TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
-const v = document.getElementById('video-bg');
-v.addEventListener('canplaythrough', function () {
-    this.play();
-});
-
 window.onfocus = () => {
-    document.getElementById('video-bg').play();
+    v.play();
 };
 window.onblur = () => {
-    document.getElementById('video-bg').pause();
+    v.pause();
 };
 
 function isOnScreen(elem) {
@@ -42,27 +41,22 @@ function isOnScreen(elem) {
     return (bottom > viewport_top) && (top < viewport_bottom);
 }
 
-/*
-const $body = document.querySelector('body');
-$body.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    window.scrollBy(0, e.deltaY * 0.9);
-});
-*/
-
+var p = false;
 // Is on screen
 $(window).on('scroll', () => {
     $('header#r').css('opacity', 1);
     if (isOnScreen($('#home'))) {
         v.play();
-        $('section, #first, main').removeClass('toWhite').addClass('toBlack');
         $('header.side *').css({
             'color': 'var(--pink)'
         });
         $('.side').addClass('pink-hover');
     } else {
         v.pause();
-        $('section, #first, main').removeClass('toBlack').addClass('toWhite');
+        if(!p) {
+            $('section, #first, main').removeClass('toBlack').addClass('toWhite');
+            p = true;
+        }
         $('header.side *').css({
             'color': 'var(--black)'
         });
@@ -166,3 +160,21 @@ $('.frame video').on('ended', (e) => {
         document.getElementById(vid).currentTime = 0;
     }).css('z-index', '-1').get(0).pause();
 });
+
+/*
+// Vimeo dim
+var iframe = document.querySelector('iframe');
+var player = new Vimeo.Player(iframe);
+
+player.on('play', () => {
+    $('main, section').removeClass('toWhite').addClass('toBlack');
+});
+
+player.on('ended', () => {
+    $('main, section').removeClass('toBlack').addClass('toWhite');
+});
+
+player.on('pause', () => {
+    $('main, section').removeClass('toBlack').addClass('toWhite');
+});
+*/
