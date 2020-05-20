@@ -515,6 +515,10 @@ Reel
     color: var(--black);
 }
 
+#reel h1 {
+    display: none;
+}
+
 #reel .embed-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -620,15 +624,7 @@ Work
     z-index: -1;
 }
 
-/*
-#frame--headings h2:before {
-    content: "\""
-}
 
-#frame--headings h2:after {
-    content: "\""
-}
-*/
 #frame--headings p {
     font-style: italic;
 }

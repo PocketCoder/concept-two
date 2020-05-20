@@ -10,6 +10,10 @@
         animation: none;
     }
 
+    .loading {
+        display: none;
+    }
+
     /* ---------------
 
     Misc
@@ -145,6 +149,22 @@
     #about p {
         font-size: 4vw;
         width: 100%;
+    }
+
+    /* ---------------
+
+    Home
+
+    --------------- */
+
+    #reel {
+        justify-content: space-evenly;
+        height: 50vh;
+    }
+
+    #reel h1 {
+        display: initial;
+        font-size: 10vw;
     }
 
     /* ---------------
