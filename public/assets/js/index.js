@@ -10,7 +10,7 @@ const hv = document.querySelector('.work--video-bg');
 hv.preload = "auto";
 
 v.addEventListener('canplaythrough', () => {
-    $('.loading').delay(1000).fadeOut(1000, () => {
+    setTimeout(() => {
         v.play();
     });
 });
