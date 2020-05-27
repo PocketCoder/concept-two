@@ -3,6 +3,7 @@ const app = express();
 var path = require('path');
 const bodyParser = require("body-parser");
 const nodemailer = require('nodemailer');
+const compression = require('compression');
 
 app.use(express.static('public'));
 
@@ -19,6 +20,8 @@ app.listen(process.env.PORT || 8000, () => {
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
+app.use(compression());
 
 app.set("view engine", "ejs");
 
