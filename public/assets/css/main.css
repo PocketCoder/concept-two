@@ -566,28 +566,16 @@ Work
     font-style: italic;
 }
 
-.no-webp #diy {
+#diy {
     background-image: url(../img/work/diy.jpg);
 }
 
-.webp #diy {
-    background-image: url(../img/work/diy.webp);
-}
-
-.no-webp #wayc {
+#wayc {
     background-image: url(../img/work/wayc.png);
 }
 
-.webp #wayc {
-    background-image: url(../img/work/wayc.webp);
-}
-
-.no-webp #fagot {
+#fagot {
     background-image: url(../img/work/fagot.png);
-}
-
-.webp #fagot {
-    background-image: url(../img/work/fagot.webp);
 }
 
 /* ---------------
