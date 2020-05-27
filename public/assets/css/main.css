@@ -388,11 +388,11 @@ h2#outer-title {
     transition: all 0.25s ease-in-out;
 }
 
-.no-webp #me {
+.no-webp #me:after {
     background-image: url('../img/me/me-crop.png');
 }
 
-.webp #me {
+.webp #me:after {
     background-image: url('../img/me/me-crop.webp');
 }
 
