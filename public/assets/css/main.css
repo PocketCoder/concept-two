@@ -424,13 +424,22 @@ h2#outer-title {
     height: 100%;
     width: 50%;
 
-    background: url("../img/me/me-crop-b&w.png") no-repeat center;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
 
     font-size: 8vw;
 
     overflow: hidden;
     white-space: nowrap;
+}
+
+.no-webp #me {
+    background-image: url('../img/me/me-crop-b&w.png');
+}
+
+.webp #me {
+    background-image: url('../img/me/me-crop-b&w.webp');
 }
 
 #me h2 {
@@ -452,11 +461,20 @@ h2#outer-title {
     bottom: 0;
     content: ' ';
 
-    background: url("../img/me/me-crop.png") no-repeat center;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
 
     opacity: 0;
     transition: all 0.25s ease-in-out;
+}
+
+.no-webp #me {
+    background-image: url('../img/me/me-crop.png');
+}
+
+.webp #me {
+    background-image: url('../img/me/me-crop.webp');
 }
 
 #me:hover:after {
@@ -629,16 +647,28 @@ Work
     font-style: italic;
 }
 
-#diy {
+.no-webp #diy {
     background-image: url(../img/work/diy.jpg);
 }
 
-#wayc {
+.webp #diy {
+    background-image: url(../img/work/diy.webp);
+}
+
+.no-webp #wayc {
     background-image: url(../img/work/wayc.png);
 }
 
-#fagot {
+.webp #wayc {
+    background-image: url(../img/work/wayc.webp);
+}
+
+.no-webp #fagot {
     background-image: url(../img/work/fagot.png);
+}
+
+.webp #fagot {
+    background-image: url(../img/work/fagot.webp);
 }
 
 /* ---------------
