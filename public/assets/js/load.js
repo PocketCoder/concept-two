@@ -8,7 +8,7 @@ const v = document.getElementById('video-bg');
 const hv = document.querySelector('.work--video-bg');
 hv.preload = "auto";
 
-v.addEventListener('canplaythrough', () => {
+v.addEventListener('canplay', () => {
     setTimeout(() => {
         v.play();
     });
