@@ -138,17 +138,12 @@ section {
     min-height: 100vh;
     width: 100vw;
 
-    background-color: black;
+    background-color: transparent;
 }
 
 .flex {
     display: flex;
     -webkit-display: flex;
-}
-
-.darker {
-    font-weight: 300;
-    color: var(--darkPink);
 }
 
 /* ---------------
@@ -418,7 +413,6 @@ About
     height: 100vh;
     width: 100vw;
 
-    background-color: white;
     color: var(--black);
 }
 
@@ -448,7 +442,6 @@ Reel
     height: 100vh;
     width: 100vw;
 
-    background-color: white;
     color: var(--black);
 }
 
@@ -590,7 +583,6 @@ Contact
 
     min-height: 100vh;
 
-    background-color: white;
     color: var(--black);
 }
 
@@ -911,36 +903,5 @@ Aniamtions
 @keyframes toWhite {
     to {
         background-color: white;
-    }
-}
-
-/* --------------- toBlack --------------- */
-
-.toBlack {
-    animation: toBlack 1s forwards ease-in-out;
-    -webkit-animation: toBlack 1s forwards ease-in-out;
-}
-
-@-webkit-keyframes toBlack {
-    to {
-        background-color: black;
-    }
-}
-
-@-moz-keyframes toBlack {
-    to {
-        background-color: black;
-    }
-}
-
-@-o-keyframes toBlack {
-    to {
-        background-color: black;
-    }
-}
-
-@keyframes toBlack {
-    to {
-        background-color: black;
     }
 }

@@ -35,7 +35,7 @@ $(window).on('scroll', () => {
     } else {
         v.pause();
         if(!p) {
-            $('section, #first, main').removeClass('toBlack').addClass('toWhite');
+            $('main, .gap').addClass('toWhite');
             p = true;
         }
         $('header.side *').css({
