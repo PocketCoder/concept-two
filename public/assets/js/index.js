@@ -1,20 +1,3 @@
-var rellax = new Rellax('.rellax');
-var rellaxC = new Rellax('.rellax-c', {
-    center: true
-});
-
-
-//TODO: https://medium.com/@aswin_s/fullscreen-video-backgrounds-e8376ef93c72 -- read through and complete before deployment
-const v = document.getElementById('video-bg');
-const hv = document.querySelector('.work--video-bg');
-hv.preload = "auto";
-
-v.addEventListener('canplaythrough', () => {
-    setTimeout(() => {
-        v.play();
-    });
-});
-
 window.onfocus = () => {
     v.play();
 };
@@ -158,21 +141,3 @@ $('.frame video').on('ended', (e) => {
         document.getElementById(vid).currentTime = 0;
     }).css('z-index', '-1').get(0).pause();
 });
-
-/*
-// Vimeo dim
-var iframe = document.querySelector('iframe');
-var player = new Vimeo.Player(iframe);
-
-player.on('play', () => {
-    $('main, section').removeClass('toWhite').addClass('toBlack');
-});
-
-player.on('ended', () => {
-    $('main, section').removeClass('toBlack').addClass('toWhite');
-});
-
-player.on('pause', () => {
-    $('main, section').removeClass('toBlack').addClass('toWhite');
-});
-*/
