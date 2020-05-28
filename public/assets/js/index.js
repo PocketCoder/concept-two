@@ -1,6 +1,7 @@
 window.onfocus = () => {
     v.play();
 };
+
 window.onblur = () => {
     v.pause();
 };
