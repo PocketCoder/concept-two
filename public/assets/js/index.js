@@ -23,9 +23,21 @@ function isOnScreen(elem) {
     return (bottom > viewport_top) && (top < viewport_bottom);
 }
 
+// Test via a getter in the options object to see if the passive property is accessed
+var supportsPassive = false;
+try {
+    var opts = Object.defineProperty({}, 'passive', {
+        get: function () {
+            supportsPassive = true;
+        }
+    });
+    window.addEventListener("testPassive", null, opts);
+    window.removeEventListener("testPassive", null, opts);
+} catch (e) {};
+
 var p = false;
 // Is on screen
-$(window).on('scroll', () => {
+window.addEventListener('scroll', () => {
     $('header#r').css('opacity', 1);
     if (isOnScreen($('#home'))) {
         v.play();
@@ -35,7 +47,7 @@ $(window).on('scroll', () => {
         $('.side').addClass('pink-hover');
     } else {
         v.pause();
-        if(!p) {
+        if (!p) {
             $('main, .gap').addClass('toWhite');
             p = true;
         }
@@ -43,12 +55,6 @@ $(window).on('scroll', () => {
             'color': 'var(--black)'
         });
         $('.side').removeClass('pink-hover');
-    }
-
-    if (isOnScreen($('#name'))) {
-
-    } else {
-
     }
 
     if (isOnScreen($('#about'))) {
@@ -59,8 +65,6 @@ $(window).on('scroll', () => {
 
     if (isOnScreen($('#text--wrapper p'))) {
         $('.ani--fadeUp').addClass('fadeUp');
-    } else {
-
     }
 
     if (isOnScreen($('#work'))) {
@@ -80,7 +84,7 @@ $(window).on('scroll', () => {
     } else {
         $('header.side li a[href="#contact"]').removeClass('active');
     }
-});
+}, supportsPassive ? {passive: true} : false);
 
 // About
 $('#desc a').on('mouseover', (el) => {
