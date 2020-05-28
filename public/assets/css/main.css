@@ -897,3 +897,287 @@ Aniamtions
         background-color: white;
     }
 }
+
+/* ------------------------------------------------------------
+
+---------------------- Media Queries --------------------------
+
+------------------------------------------------------------ */
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    * {
+        animation: none;
+    }
+
+    .loading {
+        display: none;
+    }
+
+    /* ---------------
+
+    Misc
+
+    --------------- */
+
+    a:not(.no-line):before,
+    a.active:before {
+        background-color: white;
+    }
+
+    main {
+        margin: 0;
+        background-color: white;
+    }
+
+    .gap {
+        display: none;
+    }
+
+    section {
+        min-height: 50vh;
+    }
+
+    /* ---------------
+
+    Header
+
+    --------------- */
+
+    header.side {
+        height: 50px;
+        width: 100vw;
+        color: white;
+        background-color: black;
+    }
+
+    #l {
+        display: none;
+        transform-origin: none;
+        -webkit-transform-origin: none;
+        transform: none;
+        -webkit-transform: none;
+    }
+
+    #r {
+        opacity: 1;
+        transform: none;
+    }
+
+    #r nav ul li a {
+        color: white;
+    }
+
+    /* ---------------
+
+    Home
+
+    --------------- */
+
+    #home {
+        height: 50vh;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #video-bg {
+        display: none;
+    }
+
+    #title {
+        height: 50%;
+        width: 90%;
+        margin: 0 0 0 5%;
+    }
+
+    #title .line {
+        font-size: 10vw;
+        transform: translateY(0);
+        animation: none;
+    }
+
+    #title strong {
+        animation: none;
+        font-weight: 500;
+    }
+
+    /* ---------------
+
+    Name
+
+    --------------- */
+
+    #name {
+        height: 50vh;
+    }
+
+    #me {
+        justify-content: flex-start;
+        width: 90%;
+    }
+
+    #me:after {
+        display: none;
+    }
+
+    #name>h2 {
+        display: none;
+    }
+
+    #me h2 {
+        color: black;
+        margin: 5% 0 0 0;
+    }
+
+    /* ---------------
+
+    About
+
+    --------------- */
+
+    #about {
+        min-height: 75vh;
+        height: auto;
+        padding: 5% 5%;
+    }
+    
+    #about h2 {
+        font-size: 8vw;
+        color: var(--black);
+    }
+
+    #about p {
+        font-size: 4vw;
+        width: 100%;
+    }
+
+    /* ---------------
+
+    Home
+
+    --------------- */
+
+    #reel {
+        justify-content: space-evenly;
+        height: 50vh;
+    }
+
+    #reel h1 {
+        display: initial;
+        font-size: 10vw;
+    }
+
+    /* ---------------
+
+    Work
+
+    --------------- */
+
+    #work {
+        flex-direction: row;
+        height: 150vh;
+    }
+
+    #work--row {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: flex-start;
+        height: 100%;
+
+        padding: 10% 0;
+    }
+
+    #work .frame {
+        height: 200px;
+        width: 90vw;
+        z-index: 2;
+    }
+
+    #work .frame:not(:first-child) {
+        margin-top: 200px;
+    }
+
+    #work .frame:hover {
+        width: 90vw;
+    }
+
+    #frame--headings {
+        top: 200px;
+        left: 0;
+        width: 90vw;
+        opacity: 1;
+    }
+
+    .frame a {
+        align-self: flex-start;
+        opacity: 1;
+    }
+
+    .frame a svg {
+        height: 50;
+        width: 50;
+    }
+
+    .frame a:hover {
+        transform: none;
+    }
+
+    .work--video-bg {
+        display: none;
+    }
+
+    /* ---------------
+
+    Contact
+
+    --------------- */
+
+    #contact {
+        padding: 5% 0;
+    }
+
+    #contact #contact--header {
+        text-align: center;
+    }
+
+    #contact #contact--form {
+        flex-direction: column-reverse;
+    }
+
+    #contact #contact--form .left,
+    #contact #contact--form .right {
+        padding: 5% 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #contact #contact--form .right {
+        border-left: 0;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    #contact--form #row--wrapper .row {
+        align-items: center;
+        padding: 0 0 5% 10%;
+    }
+
+    /* ---------------
+
+    Footer
+
+    --------------- */
+
+    footer {
+        display: none;
+    }
+}
