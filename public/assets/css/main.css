@@ -348,12 +348,8 @@ h2#outer-title {
     white-space: nowrap;
 }
 
-.no-webp #me {
+#me {
     background-image: url('../img/me/me-crop-b&w.png');
-}
-
-.webp #me {
-    background-image: url('../img/me/me-crop-b&w.webp');
 }
 
 #me h2 {
@@ -383,12 +379,8 @@ h2#outer-title {
     transition: all 0.25s ease-in-out;
 }
 
-.no-webp #me:after {
+#me:after {
     background-image: url('../img/me/me-crop.png');
-}
-
-.webp #me:after {
-    background-image: url('../img/me/me-crop.webp');
 }
 
 #me:hover:after {
