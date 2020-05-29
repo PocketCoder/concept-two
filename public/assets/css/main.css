@@ -476,6 +476,10 @@ Work
     overflow-x: hidden;
 }
 
+#work h1 {
+    display: none;
+}
+
 #work--row {
     flex-direction: row;
     justify-content: space-evenly;
@@ -560,6 +564,56 @@ Work
 
 #fagot {
     background-image: url(../img/work/fagot.png);
+}
+
+/* ---------------
+
+Scripts
+
+--------------- */
+
+#scripts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#scripts h1 {
+    display: none;
+}
+
+.box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 400px;
+    width: 400px;
+
+    margin: 50px;
+    padding: 20px;
+
+    transform: scale(1);
+
+    outline: 0px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    outline: 5px solid var(--black);
+    background-color: var(--pink);
+    transition: all 0.25s ease-in-out;
+}
+
+.inactive .box:hover {
+    cursor: default;
+    outline: none;
 }
 
 /* ---------------

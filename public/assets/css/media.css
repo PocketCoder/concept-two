@@ -153,7 +153,7 @@
 
     /* ---------------
 
-    Home
+    Reel
 
     --------------- */
 
@@ -174,56 +174,60 @@
     --------------- */
 
     #work {
-        flex-direction: row;
-        height: 150vh;
+        justify-content: flex-start;
+        min-height: 150vh;
+    }
+
+    #work h1 {
+        display: initial;
+        font-size: 10vw;
     }
 
     #work--row {
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-content: flex-start;
-        height: 100%;
-
-        padding: 10% 0;
+        align-content: center;
+        min-height: inherit;
     }
 
     #work .frame {
         height: 200px;
-        width: 90vw;
-        z-index: 2;
-    }
-
-    #work .frame:not(:first-child) {
-        margin-top: 200px;
-    }
-
-    #work .frame:hover {
-        width: 90vw;
-    }
-
-    #frame--headings {
-        top: 200px;
-        left: 0;
-        width: 90vw;
-        opacity: 1;
+        width: 90%;
     }
 
     .frame a {
-        align-self: flex-start;
+        display: none;
+    }
+
+    #frame--headings {
+        top: 90%;
+        left: 0;
         opacity: 1;
-    }
-
-    .frame a svg {
-        height: 50;
-        width: 50;
-    }
-
-    .frame a:hover {
-        transform: none;
+        height: 100%;
+        width: 100%;
     }
 
     .work--video-bg {
         display: none;
+    }
+
+    /* ---------------
+
+    Scripts
+
+    --------------- */
+
+    #scripts h1 {
+        display: initial;
+        font-size: 10vw;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+        outline: 5px solid var(--black);
+        background-color: var(--pink);
+        transition: all 0.25s ease-in-out;
     }
 
     /* ---------------

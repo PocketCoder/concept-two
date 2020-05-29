@@ -79,6 +79,12 @@ window.addEventListener('scroll', () => {
         });
     }
 
+    if (isOnScreen($('#scripts'))) {
+        $('header.side li a[href="#scripts"]').addClass('active');
+    } else {
+        $('header.side li a[href="#scripts"]').removeClass('active');
+    }
+
     if (isOnScreen($('#contact'))) {
         $('header.side li a[href="#contact"]').addClass('active');
     } else {
