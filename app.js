@@ -7,6 +7,8 @@ const nodemailer = require('nodemailer');
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
+    res.set('Content-Security-Policy', 'default-src https:');
+    res.set('cache-control', 'no-cache, max-age=0, stale-while-revalidate=300');
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
@@ -20,7 +22,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.zoho.eu',
