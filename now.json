@@ -1,7 +1,12 @@
 {
     "version": 2,
     "routes": [{
-        "src": "/",
-        "dest": "public/"
-    }]
+            "src": "/",
+            "dest": "public/"
+        }, {
+            "src": "/.*",
+            "status": 404,
+            "dest": "404.html"
+        }
+    ]
 }

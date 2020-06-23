@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+
+        <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+        <title>Jake Williams</title>
+
+        <meta name="description" content="Jake Williams is a freelance filmmaker and writer.">
+
+        <link rel="stylesheet" href="assets/css/font.min.css" />
+        <link rel="stylesheet" href="assets/css/main.min.css" />
+
+        <link rel="preload" href="assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf" as="font" />
+        <link rel="preload" href="assets/fonts/JosefinSans-VariableFont_wght.ttf" as="font" />
+        <link rel="preload" href="assets/fonts/Jost-VariableFont_ital,wght.ttf" as="font" />
+        <style>
+            header.side * {
+                color: var(--black);
+            }
+
+            main {
+                background-color: white;
+            }
+
+            #main {
+                width: 100%;
+                height: 100%;
+                padding: 0 5vw;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+            }
+
+            #main h1 {
+                font-size: 7vw;
+            }
+
+            #main h3 {
+                font-size: 2vw;
+            }
+
+            #error--group {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="l" class="side flex">
+            <h1 id="nav-title"><a href="../">jake williams</a>.</h1>
+        </header>
+        <header id="r" class="side flex">
+            <nav>
+				<ul>
+					<li><a href="/#home">home.</a></li>
+					<li><a href="/#about">about.</a></li>
+					<li><a href="/#reel" target="_blank">showreel.</a></li>
+                    <li><a href="/#work">work.</a></li>
+                    <li><a href="/#scripts">scripts.</a></li>
+					<li><a href="assets/files/Jake Williams CV.pdf" target="_blank">c.v.</a></li>
+					<li><a href="/#contact">contact.</a></li>
+				</ul>
+			</nav>
+        </header>
+        <main>
+            <section id="main" class="flex">
+                <div id="error--group">
+                    <h1>Uh oh, that page doesn't exist.</h1>
+                    <h3>{Error code: 404}</h3>
+                </div>
+                <div id="error--group">
+                    <h2>Use the menu on the right to get back on track.</h2>
+                    <br />
+                    <p>Think something should be here? Send me an email: <a href="mailto:jake@jpwfilm.co.uk" target="_blank">jake@jpwfilm.co.uk</a>.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
