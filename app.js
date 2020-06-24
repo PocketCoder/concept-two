@@ -14,7 +14,6 @@ app.listen(process.env.PORT || 8000, () => {
     console.log(`Listening on http://127.0.0.1:${process.env.PORT || 8000}`);
 });
 
-
 // Contact form
 app.use(bodyParser.urlencoded({
     extended: true
@@ -26,8 +25,8 @@ const transporter = nodemailer.createTransport({
     host: 'smtp.zoho.eu',
     port: 465,
     auth: {
-        user: 'jake@jpwfilm.co.uk',
-        pass: 'WB31xZnC1R8J'
+        user: process.env.ZOHO_USER,
+        pass: process.env.ZOHO_PASS
     }
 });
 
@@ -54,6 +53,6 @@ app.post('/email', function(req, res) {
             res.redirect('/404.html')
             return console.log(error);
         }
-        res.sendFile(path.join(__dirname + '/index.html#contact?sent=true')); //TODO: Make this mean something
+        res.redirect('/index.html#contact?sent=true'); //TODO: Make this mean something
     });
 });
