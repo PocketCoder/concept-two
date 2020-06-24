@@ -32,7 +32,7 @@ const transporter = nodemailer.createTransport({
     port: 465,
     auth: {
         user: 'jake@jpwfilm.co.uk',
-        pass: 'EI2fvXgvK6z6'
+        pass: 'WB31xZnC1R8J'
     }
 });
 
