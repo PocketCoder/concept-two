@@ -48,10 +48,9 @@ app.post('/email', function(req, res) {
         html: `<p><b>Name:</b> ${name}<br /><b>Email:</b> ${email}<br /><b>Subject:</b> ${subject}<br /><b>Message:</b><br />${message}</p>`
     };
 
-    transporter.sendMail(mailOptions, function(error, info) {
-        if (error) {
-            res.redirect('/404.html');
-            return console.log(error);
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            return console.log(err);
         }
     });
     res.redirect(307, '/'); //TODO: Make this mean something
