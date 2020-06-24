@@ -52,8 +52,9 @@ app.post('/email', function(req, res) {
         if (error) {
             res.redirect('/404.html');
             return console.log(error);
+        } else {
+            res.redirect(307, '/index.html#contact?sent=true'); //TODO: Make this mean something
         }
     });
-
     res.redirect(307, '/index.html#contact?sent=true'); //TODO: Make this mean something
 });
