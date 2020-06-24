@@ -53,8 +53,8 @@ app.post('/email', function(req, res, next) {
             res.redirect(307, '/404.html');
             return console.log(err);
         } else {
-            res.redirect('/'); //TODO: Make this mean something
             next();
+            res.redirect('/'); //TODO: Make this mean something
         }
     });
 });
