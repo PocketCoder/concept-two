@@ -55,5 +55,5 @@ app.post('/email', function(req, res) {
         }
     });
 
-    res.redirect('/index.html#contact?sent=true'); //TODO: Make this mean something
+    res.redirect(307, '/index.html#contact?sent=true'); //TODO: Make this mean something
 });
