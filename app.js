@@ -10,11 +10,6 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.use(function(req, res, next) {
-    res.status(404);
-    res.sendFile(path.join(__dirname + '/public/404.html'));
-});
-
 app.listen(process.env.PORT || 8000, () => {
     console.log(`Listening on http://127.0.0.1:${process.env.PORT || 8000}`);
 });
