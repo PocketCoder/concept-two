@@ -55,4 +55,5 @@ app.post('/email', function(req, res) {
         }
     });
     res.redirect(303, '/index.html'); //TODO: Make this mean something
+    res.sendFile(path.join(__dirname + '/index.html#contact'));
 });
