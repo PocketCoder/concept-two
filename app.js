@@ -50,8 +50,10 @@ app.post('/email', function(req, res) {
 
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
+            res.redirect(307, '/404.html');
             return console.log(err);
+        } else {
+            res.redirect('/'); //TODO: Make this mean something
         }
     });
-    res.redirect(307, '/'); //TODO: Make this mean something
 });
