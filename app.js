@@ -45,7 +45,7 @@ app.post('/email', function(req, res) {
         cc: 'jake.williams77@gmail.com', // cc main email just in case
         subject: "WEBSITE FORM SUBMISSION", // Subject line
         text: message, // plaintext body
-        html: '<p><b>Name:</b> ' + name + '<br /><b>Email:</b> ' + email + '<br /><b>Subject:</b> ' + subject + '<br /><b>Message:</b><br />' + message + '</p>'
+        html: `<p><b>Name:</b> ${name}<br /><b>Email:</b> ${email}<br /><b>Subject:</b> ${subject}<br /><b>Message:</b><br />${message}</p>`
     };
 
     transporter.sendMail(mailOptions, function(error, info) {
