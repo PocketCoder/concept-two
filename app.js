@@ -54,5 +54,5 @@ app.post('/email', function(req, res) {
             return console.log(error);
         }
     });
-    res.redirect('/index.html'); //TODO: Make this mean something
+    res.redirect(303, '/index.html'); //TODO: Make this mean something
 });
