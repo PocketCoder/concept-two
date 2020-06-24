@@ -51,8 +51,10 @@ app.post('/email', function(req, res) {
 
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
+            res.redirect('/404.html')
             return console.log(error);
+        } else {
+            res.redirect('/index.html#contact?sent=true'); //TODO: Make this mean something
         }
     });
-    res.redirect("/index.html#contact?sent=true"); //TODO: Make this mean something
 });
