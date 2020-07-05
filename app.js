@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/email', function(req, res, next) {
+app.post('/email', function(req, res) {
     const name = req.body.name;
     const email = req.body.email;
     const subject = req.body.subject;
@@ -53,7 +53,6 @@ app.post('/email', function(req, res, next) {
             res.redirect(307, '/404.html');
             return console.log(err);
         } else {
-            next();
             res.redirect('/'); //TODO: Make this mean something
         }
     });
