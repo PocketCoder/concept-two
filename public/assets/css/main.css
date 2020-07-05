@@ -231,6 +231,7 @@ Home
 
 #home {
     position: relative;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
@@ -239,8 +240,8 @@ Home
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     overflow: hidden;
 }
@@ -256,12 +257,12 @@ Home
 
 #title .line {
     margin-left: 10vw;
-    height: cacl(100vh/4);
+    height: calc(100vh/4);
     padding: 1% 0;
 
     color: var(--darkPink);
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 10em;
+    font-size: calc(100vh/5);
     font-weight: 300;
 
     transform: translateY(100vh);
@@ -614,6 +615,20 @@ Scripts
 .inactive .box:hover {
     cursor: default;
     outline: none;
+}
+
+/* ---------------
+
+c.v.
+
+--------------- */
+
+#cv {
+    background-color: var(--pink) !important;
+}
+
+#cv.toWhite {
+    animation: none;
 }
 
 /* ---------------
