@@ -20,14 +20,6 @@ $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
     }
 });
 
-window.onfocus = () => {
-    v.play();
-};
-
-window.onblur = () => {
-    v.pause();
-};
-
 function isOnScreen(elem) {
     // if the element doesn't exist, abort
     if (elem.length == 0) {
@@ -60,25 +52,6 @@ try {
 var p = false;
 // Is on screen
 window.addEventListener('scroll', () => {
-    $('header#r').css('opacity', 1);
-    if (isOnScreen($('#home'))) {
-        v.play();
-        $('header.side *').css({
-            'color': 'var(--pink)'
-        });
-        $('.side').addClass('pink-hover');
-    } else {
-        v.pause();
-        if (!p) {
-            $('main, .gap').addClass('toWhite');
-            p = true;
-        }
-        $('header.side *').css({
-            'color': 'var(--black)'
-        });
-        $('.side').removeClass('pink-hover');
-    }
-
     if (isOnScreen($('#about'))) {
         $('header.side li a[href="#about"]').addClass('active');
     } else {
@@ -115,39 +88,6 @@ window.addEventListener('scroll', () => {
 }, supportsPassive ? {
     passive: true
 } : false);
-
-// About
-$('#desc a').on('mouseover', (el) => {
-    const data = el.target.attributes["data-image"].value;
-    $(`img[data-image-name="${data}"]`).animate({
-        'opacity': 0.5
-    }).css({
-        'transform': 'scale(0.95)',
-        'z-index': 0
-    });
-}).on('click', (el) => {
-    const data = el.target.attributes["data-image"].value;
-    $(`img[data-image-name="${data}"]`).animate({
-        'opacity': 0.97
-    }).css({
-        'transform': 'scale(1.1)',
-        'z-index': 2,
-        'box-shadow': '0 0px 4.3px rgba(0, 0, 0, 0.07), 0 0px 10.3px rgba(0, 0, 0, 0.101), 0 0px 19.4px rgba(0, 0, 0, 0.125), 0 0px 34.6px rgba(0, 0, 0, 0.149), 0 0px 64.8px rgba(0, 0, 0, 0.18), 0 0px 155px rgba(0, 0, 0, 0.25)',
-        'border': '5px solid white',
-        'border-radius': '10px'
-    });
-    return false;
-}).on('mouseleave', (el) => {
-    const data = el.target.attributes["data-image"].value;
-    $(`img[data-image-name="${data}"]`).animate({
-        'opacity': 0.1
-    }).css({
-        'transform': 'scale(1)',
-        'box-shadow': '0',
-        'border': 'none',
-        'border-radius': '0px'
-    });
-});
 
 // Work frames
 $('.frame a').on('mouseover', (e) => {

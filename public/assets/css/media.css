@@ -80,10 +80,6 @@
         align-items: center;
     }
 
-    #video-bg {
-        display: none;
-    }
-
     #title {
         height: 50%;
         width: 90%;
