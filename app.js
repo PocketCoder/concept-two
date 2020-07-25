@@ -18,6 +18,7 @@ app.listen(process.env.PORT || 8000, () => {
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
@@ -53,7 +54,7 @@ app.post('/email', function(req, res) {
             res.redirect(307, '/404.html');
             return console.log(err);
         } else {
-            res.redirect('/'); //TODO: Make this mean something
+            res.redirect('/#contact');
         }
     });
 });

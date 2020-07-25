@@ -116,3 +116,13 @@ $('.frame video').on('ended', (e) => {
         document.getElementById(vid).currentTime = 0;
     }).css('z-index', '-1').get(0).pause();
 });
+
+$(function() {
+    $('#contact-form').submit(function(event) {
+        event.preventDefault(); // Stops browser from navigating away from page
+        var data = $('#contact-form').serialize();
+        $.post('/email', data, function(resp) {
+            alert('Success! Email sent.');
+        });
+    });
+});
