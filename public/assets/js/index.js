@@ -58,10 +58,6 @@ window.addEventListener('scroll', () => {
         $('header.side li a[href="#about"]').removeClass('active');
     }
 
-    if (isOnScreen($('#text--wrapper p'))) {
-        $('.ani--fadeUp').addClass('fadeUp');
-    }
-
     if (isOnScreen($('#work'))) {
         $('header.side li a[href="#work"]').addClass('active');
         $('header.side *').css({
