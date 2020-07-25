@@ -1,8 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/186cae5a-50f7-4240-aaf7-0fad51da8051/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/showreel-website",
-    "appService.deploySubpath": ""
-}
